@@ -34,7 +34,7 @@ class Triangle {
         }
     }
 
-    public function getGetEquilateralId($a, $b, $c) {
+    public function getEquilateralId($a, $b, $c) {
         if($a === $b && $b === $c && $c === $a) {
             return 1;
         }

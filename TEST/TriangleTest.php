@@ -33,7 +33,7 @@ class TriangleTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testGetEquilateralId() {
-        $this->assertEquals(1, $this->tr->getGetEquilateralId(9, 9, 9));
+        $this->assertEquals(1, $this->tr->getEquilateralId(9, 9, 9));
     }
 
     public function testGetIsoscelesId() {
