@@ -14,6 +14,10 @@
 
 class Triangle {
 
+    const TRIANGLE_EQUILATERAL_ID = 1;
+    const TRIANGLE_ISOSCELES_ID = 2;
+    const TRIANGLE_SCALENE_ID = 3;
+
     public function validateInt($a, $b, $b) {
         if(!is_int($a) || !is_int($b) || !is_int($c)) {
             throw new Exception("error int");
@@ -34,21 +38,13 @@ class Triangle {
         }
     }
 
-    public function getEquilateralId($a, $b, $c) {
+    public function getTriangleId($a, $b, $c) {
         if($a === $b && $b === $c && $c === $a) {
-            return 1;
-        }
-    }
-
-    public function getIsoscelesId($a, $b, $c) {
-        if($a === $b || $b === $c || $c === $a) {
-            return 2;
-        }
-    }
-
-    public function getScaleneId($a,  $b,  $c) {
-        if($a !== $b && $b !== $c && $c !== $a) {
-            return 3;
+            return self::TRIANGLE_EQUILATERAL_ID;
+        } elseif($a === $b || $b === $c || $c === $a) {
+            return self::TRIANGLE_ISOSCELES_ID;
+        } elseif($a !== $b && $b !== $c && $c !== $a) {
+            return self::TRIANGLE_SCALENE_ID;
         }
     }
 }

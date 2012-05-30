@@ -32,16 +32,10 @@ class TriangleTest extends PHPUnit_Framework_TestCase {
         }
     }
 
-    public function testGetEquilateralId() {
-        $this->assertEquals(1, $this->tr->getEquilateralId(9, 9, 9));
-    }
-
-    public function testGetIsoscelesId() {
-        $this->assertEquals(2, $this->tr->getIsoscelesId(10, 9, 9));
-    }
-
-    public function testGetScaleneId() {
-        $this->assertEquals(3, $this->tr->getScaleneId(9, 8, 7));
+    public function testGetTriangleId() {
+        $this->assertEquals(1, $this->tr->getTriangleId(9, 9, 9));
+        $this->assertEquals(2, $this->tr->getTriangleId(10, 9, 9));
+        $this->assertEquals(3, $this->tr->getTriangleId(8, 9, 10));
     }
 
 }
